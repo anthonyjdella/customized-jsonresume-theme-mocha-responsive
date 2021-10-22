@@ -1,3 +1,9 @@
+# Customized JSON Resume Theme: Mocha Responsive
+🖼️ This is a slightly tweaked version of the [Mocha Responsive theme](https://github.com/karlitos/jsonresume-theme-mocha-responsive). Tweaked to fit my design preferences. Published on NPM and GitHub Registry.
+
+<details>
+  <summary>Click to expand README.md of the source repository!</summary>
+
 # Theme mocha responsive
 
 Dark, stylish theme strongly based on the [jsonresume-theme-caffeine](https://github.com/kelyvin/jsonresume-theme-caffeine) done by [Kelvin Nguyen](https://github.com/kelyvin). It's a theme for the [JSON Resume](http://jsonresume.org/) project and can by used with the [HackMyResume](https://github.com/hacksalot/HackMyResume) to generate nice resumes in many supported formats.
