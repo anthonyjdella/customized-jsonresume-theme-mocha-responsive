@@ -1,6 +1,6 @@
 {
   "name": "@anthonyjdella/jsonresume-theme-anthonyjdella-mocha-responsive",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Custom dark theme for JSON Resume based on Caffeine theme by Anthony Dellavecchia (https://github.com/anthonyjdella)",
   "deprecated": false,
   "main": "index.js",
