@@ -168,7 +168,6 @@ const render = (resumeJson) => {
 		if (settings.colors.text) { css = css.replace(new RegExp(TEXT_COLOR, 'g'), settings.colors.text); }
 
 		resumeTemplate = fs.readFileSync(path.resolve(__dirname, 'resume.hbs'), 'utf-8');
-		fa = fs.readFileSync(path.resolve(__dirname, "node_modules/font-awesome/css/font-awesome.min.css"), 'utf-8');
 		
 	} catch (err) {
 		throw new Error('The source handlebar template file or the stylesheet could not be read.');
@@ -183,7 +182,6 @@ const render = (resumeJson) => {
 		// as long as we use promised-handlebars handlebars.compile returns a Promise!
 		return handlebars.compile(resumeTemplate)({
 			css: css,
-			fa: fa,
 			faV4Shim: faV4Shim,
 			resume: resumeJson
 		});
