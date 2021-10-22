@@ -4,16 +4,16 @@
 
     {{#if location}}
         {{#location}}
-        {{> info-tag text=(formatAddress address city region postalCode countryCode) icon="fa-map-marker"}}
+        {{> address text=(formatAddress address city region postalCode countryCode) icon="fa-map-marker"}}
         {{/location}}
     {{/if}}
 
     {{#if email}}
-        {{> info-tag text=this.email icon="fa-envelope"}}
+        {{> email text=this.email icon="fa-envelope" email=this.email}}
     {{/if}}
 
     {{#if phone}}
-        {{> info-tag text=this.phone icon="fa-mobile-alt"}}
+        {{> phone text=this.phone icon="fa-mobile-alt" phone=this.phone}}
     {{/if}}
 
     {{#if website}}

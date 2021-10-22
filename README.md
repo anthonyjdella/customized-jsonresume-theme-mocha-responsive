@@ -1,6 +1,17 @@
 # Customized JSON Resume Theme: Mocha Responsive
 🖼️ This is a slightly tweaked version of the [Mocha Responsive theme](https://github.com/karlitos/jsonresume-theme-mocha-responsive). Tweaked to fit my design preferences. Published on NPM and GitHub Registry.
 
+## Usage
+* `npm run start` to start local server.
+
+## Content
+* `resume.hbs` template for resume.
+* `views/components/` main content which is injected into template (resume.hbs).
+* `views/partials/` secondary content which is injected into template (resume.hbs).
+* `index.js` helper functions & render function which renders the resuem.
+* `public/index.html` generated HTML after running `npm run build`.
+* `styles/main.css` style for the site.
+
 <details>
   <summary>Click to expand README.md of the source repository!</summary>
 

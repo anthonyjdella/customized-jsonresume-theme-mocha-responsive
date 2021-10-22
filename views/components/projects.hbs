@@ -1,0 +1,13 @@
+{{#if resume.projects.length}}
+<div class="container work-container">
+    {{> title value="Projects" icon="fas fa-user-tie"}}
+    {{#each resume.projects}}
+        <section class="item">
+            {{> section-header name=this.name }}
+            {{#if summary}}
+            <p class="summary">{{{mdToHtml summary}}}</p>
+            {{/if}}
+        </section>
+    {{/each}}
+</div>
+{{/if}}

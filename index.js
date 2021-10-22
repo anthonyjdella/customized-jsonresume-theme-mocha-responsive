@@ -104,6 +104,21 @@ const customHelpers = {
 			return parsedDate.toLocaleDateString('en-GB', {year: 'numeric', month: '2-digit', day: '2-digit'});
 		}
 	},
+
+	formatDateEdu: function(dateString) {
+		const parsedDate = new Date(dateString);
+		return (parsedDate.getFullYear()).toString();
+	},
+
+	formatDateWork: function(dateString) {
+		const parsedDate = new Date(dateString);
+		if (dateString != 'present') {
+			return `${String(parsedDate.getMonth() + 1).padStart(2, '0')}/${parsedDate.getFullYear()}`;
+		}
+		else {
+			return 'present';
+		}
+	},
 };
 
 // Register custom handlebars helpers
@@ -153,7 +168,7 @@ const render = (resumeJson) => {
 		if (settings.colors.text) { css = css.replace(new RegExp(TEXT_COLOR, 'g'), settings.colors.text); }
 
 		resumeTemplate = fs.readFileSync(path.resolve(__dirname, 'resume.hbs'), 'utf-8');
-		fa = fs.readFileSync(path.resolve(__dirname, "node_modules/@fortawesome/fontawesome-free/css/all.min.css"), 'utf-8');
+		fa = fs.readFileSync(path.resolve(__dirname, "node_modules/font-awesome/css/font-awesome.min.css"), 'utf-8');
 		
 	} catch (err) {
 		throw new Error('The source handlebar template file or the stylesheet could not be read.');

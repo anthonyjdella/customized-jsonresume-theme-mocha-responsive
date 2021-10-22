@@ -4,12 +4,12 @@
 
     {{#each resume.education}}
         <section class="item">
-            {{> section-header name=this.institution }}
+            {{> section-header-school name=this.institution }}
 
             <h4 class="display-inline">{{#if studyType}}{{studyType}}{{/if}}{{#and studyType area}} - {{area}}{{/and}}</h4>
 
-            {{#if gpa}}
-            <h5 class="display-inline gpa">GPA {{gpa}}</h5>
+            {{#if score}}
+            <h5 class="display-inline gpa">GPA {{score}}</h5>
             {{/if}}
 
             {{#if courses.length}}

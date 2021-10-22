@@ -236,13 +236,10 @@ ul.two-column li {
 */
 
 .profile-pic img {
-    height: 150px;
     width: 120px;
     border-radius: 10%;
     padding: 2px;
-    border: 2px solid #FF5701;
     object-fit: cover;
-    background: #FFFFFF;
     float: right;
 }
 
@@ -275,7 +272,6 @@ ul.two-column li {
     width: 300px;
     /* margin-right: 20px; */
     margin-right: 50px;
-    word-wrap: break-word;
 }
 
 .right-column, .profile-pic {
