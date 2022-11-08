@@ -1,4 +1,4 @@
-<div class="section-header clearfix">
+<div class="section-header">
     {{#if name}}
     <h4 class="bold pull-left">
         {{#if website}}
@@ -10,22 +10,22 @@
         {{/if}}
     </h4>
     {{/if}}
-    {{!-- <h5 class="italic pull-right">
-        {{#if startDate}}
-            {{#is startDate endDate}}
-                {{formatDateEdu startDate}}
+    <h5 class="italic pull-right">
+        {{#if date}}
+            {{#is date date}}
+                {{formatDateWork date}}
             {{else}}
-                <span class="startDate">{{formatDateEdu startDate}}</span>
+                <span class="date">{{formatDateWork date}}</span>
                     {{#if endDate}}
-                <span class="endDate"> - {{formatDateEdu endDate}}</span>
+                <span class="endDate"> - {{formatDateWork endDate}}</span>
                     {{else}}
                 <span class="endDate"> - Present</span>
                 {{/if}}
             {{/is}}
         {{else if endDate}}
-            <span class="endDate">completed {{formatDateEdu endDate}}</span>
+            <span class="endDate">completed {{formatDateWork endDate}}</span>
         {{else if releaseDate}}
-            {{formatDateEdu releaseDate}}
+            {{formatDateWork releaseDate}}
         {{/if}}
-    </h5> --}}
+    </h5>
 </div>

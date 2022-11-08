@@ -13,7 +13,7 @@ const marked = require('marked');
 const settings = require('./settings');
 const BACKGROUND_COLOR = '#222831';
 const ACCENT_COLOR = '#393e46';
-const COLLORED_ACCENT_COLOR = '#FF5701';
+const COLLORED_ACCENT_COLOR = "#5C78FF";
 const TEXT_COLOR = '#FFFFFF';
 
 // global  flags
@@ -22,103 +22,130 @@ let RENDER_MARKDOWN = process.env.RENDER_MARKDOWN || false;
 let PROCESS_IMAGE =  process.env.PROCESS_IMAGE || false;
 
 const customHelpers = {
-	/**
-	 *  DO NOT USE ARROW FUNCTIONS! https://blog.pixelkritzel.de/posts/handlebars-dont-use-es6-arrow-functions-to-define-helpers/
-	 */
-	is: function(val1, val2, options) {
-		if(val1 && val1 === val2) {
-			return options.fn(this);
-		}
-		return options.inverse(this);
-	},
+    /**
+     *  DO NOT USE ARROW FUNCTIONS! https://blog.pixelkritzel.de/posts/handlebars-dont-use-es6-arrow-functions-to-define-helpers/
+     */
+    is: function (val1, val2, options) {
+        if (val1 && val1 === val2) {
+            return options.fn(this);
+        }
+        return options.inverse(this);
+    },
 
-	lowercase: function(str) {
-		return str.toLowerCase();
-	},
+    lowercase: function (str) {
+        return str.toLowerCase();
+    },
 
-	and: function(testA, testB, options) {
-		if (testA && testB) {
-			return options.fn(this);
-		} else {
-		  	return options.inverse(this);
-		}
-	},
+    and: function (testA, testB, options) {
+        if (testA && testB) {
+            return options.fn(this);
+        } else {
+            return options.inverse(this);
+        }
+    },
 
-	imgPathToBase64: async function(imgPath) {
-		try {
-			// The image processing is disabled by default
-			if (!PROCESS_IMAGE) return imgPath;
+    imgPathToBase64: async function (imgPath) {
+        try {
+            // The image processing is disabled by default
+            if (!PROCESS_IMAGE) return imgPath;
 
-			// If no path provided throw an error
-			if (!imgPath) { throw new Error('No valid path for the profile-picture image!'); }
+            // If no path provided throw an error
+            if (!imgPath) {
+                throw new Error("No valid path for the profile-picture image!");
+            }
 
-			return RENDER_ASCYNC ? `data:image/jpg;base64,${await imageToBase64(imgPath)}` : imgPath;
-		} catch (e) {
-			throw new Error(`There was an error when trying to convert the image ${imgPath}: ${e}`)
-		}
-	},
+            return RENDER_ASCYNC
+                ? `data:image/jpg;base64,${await imageToBase64(imgPath)}`
+                : imgPath;
+        } catch (e) {
+            throw new Error(
+                `There was an error when trying to convert the image ${imgPath}: ${e}`
+            );
+        }
+    },
 
-	removeProtocol: function(url) {
-		return url.replace(/.*?:\/\//g, '')
-	},
+    removeProtocol: function (url) {
+        return url.replace(/.*?:\/\//g, "");
+    },
 
-	mdToHtml: function(string) {
-		// The rendering of Markdown markup is disabled by default
-		return RENDER_MARKDOWN ? marked(string) : string;
-	},
+    mdToHtml: function (string) {
+        // The rendering of Markdown markup is disabled by default
+        return RENDER_MARKDOWN ? marked(string) : string;
+    },
 
-	concat: function() {
-		let res = '';
+    concat: function () {
+        let res = "";
 
-		for(let arg in arguments){
-			if (typeof arguments[arg] !== 'object' && typeof arguments[arg] !== 'function') {
-				res += arguments[arg];
-			}
-		}
+        for (let arg in arguments) {
+            if (
+                typeof arguments[arg] !== "object" &&
+                typeof arguments[arg] !== "function"
+            ) {
+                res += arguments[arg];
+            }
+        }
 
-		return res;
-	},
+        return res;
+    },
 
-	formatAddress: function(address, city, region, postalCode, countryCode) {
-		let addressList = addressFormat({
-			address: address,
-			city: city,
-			subdivision: region,
-			postalCode: postalCode,
-			countryCode: countryCode
-		});
+    formatAddress: function (address, city, region, postalCode, countryCode) {
+        let addressList = addressFormat({
+            address: address,
+            city: city,
+            subdivision: region,
+            postalCode: postalCode,
+            countryCode: countryCode,
+        });
 
-		return addressList.join('<br/>');
-	},
+        return addressList.join("<br/>");
+    },
 
-	formatDate: function(dateString) {
-		const parsedDate = new Date(dateString);
-		// standalone year
-		if (/^([1-2][0-9]{3})$/.test(dateString)) {
-			return (parsedDate.getFullYear()).toString();
-		// year month YYYY-MM format
-		} else if (/^([1-2][0-9]{3}-[0-1]?[0-9])$/.test(dateString)) {
-			return `${String(parsedDate.getMonth() + 1).padStart(2, '0')}/${parsedDate.getFullYear()}`;
-		} else {
-		// return the date in DD/MM/YYYY format
-			return parsedDate.toLocaleDateString('en-GB', {year: 'numeric', month: '2-digit', day: '2-digit'});
-		}
-	},
+    formatDate: function (dateString) {
+        const parsedDate = new Date(dateString);
+        // standalone year
+        if (/^([1-2][0-9]{3})$/.test(dateString)) {
+            return parsedDate.getFullYear().toString();
+            // year month YYYY-MM format
+        } else if (/^([1-2][0-9]{3}-[0-1]?[0-9])$/.test(dateString)) {
+            return `${String(parsedDate.getMonth() + 1).padStart(
+                2,
+                "0"
+            )}/${parsedDate.getFullYear()}`;
+        } else {
+            // return the date in DD/MM/YYYY format
+            return parsedDate.toLocaleDateString("en-GB", {
+                year: "numeric",
+                month: "2-digit",
+                day: "2-digit",
+            });
+        }
+    },
 
-	formatDateEdu: function(dateString) {
-		const parsedDate = new Date(dateString);
-		return (parsedDate.getFullYear()).toString();
-	},
+    formatDateEdu: function (dateString) {
+        const parsedDate = new Date(dateString);
+        return parsedDate.getFullYear().toString();
+    },
 
-	formatDateWork: function(dateString) {
-		const parsedDate = new Date(dateString);
-		if (dateString != 'present') {
-			return `${String(parsedDate.getMonth() + 1).padStart(2, '0')}/${parsedDate.getFullYear()}`;
-		}
-		else {
-			return 'present';
-		}
-	},
+    formatDateWork: function (dateString) {
+        const parsedDate = new Date(dateString);
+        if (dateString != "present") {
+            return `${String(parsedDate.getMonth() + 1).padStart(
+                2,
+                "0"
+            )}/${parsedDate.getFullYear()}`;
+        } else {
+            return "present";
+        }
+    },
+
+    formatDateAwards: function (dateString) {
+        const parsedDate = new Date(dateString);
+        if (dateString != "present") {
+            return parsedDate.getFullYear().toString();
+        } else {
+            return "present";
+        }
+    },
 };
 
 // Register custom handlebars helpers

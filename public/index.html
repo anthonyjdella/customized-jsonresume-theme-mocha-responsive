@@ -201,7 +201,7 @@ ul.two-column li {
     width: 45px;
     /* margin: 8px 0 10px; */
     margin: 4px 0 10px;
-    border-top: 1px solid #FF5701;
+    border-top: 1px solid #5C78FF;
 }
 
 .pull-left {
@@ -263,7 +263,7 @@ ul.two-column li {
     min-height: 792px;
     display: block;
     margin: 0 auto;
-    border-top: 10px solid #FF5701;
+    border-top: 10px solid #5C78FF;
     /* padding: 36px 22px 30px 34px; */
     padding: 50px; /* 50px calc(50px + 10%);*/
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
@@ -324,6 +324,12 @@ ul.two-column li {
     border-radius: 35%;
     padding: 2px;
     margin-left: 5px;
+}
+
+@media only screen and (min-width: 2560px) {
+    .page {
+        padding: 2rem 60rem 2rem 60rem;
+    }
 }
 
 @media only screen and (max-width: 800px) {
@@ -408,7 +414,7 @@ ul.two-column li {
         width: 45px;
         /* margin: 8px 0 10px; */
         margin: 4px 0 10px;
-        border-top: 2px solid #FF5701;
+        border-top: 2px solid #5C78FF;
     }
 
     .page .resume-header,
@@ -416,18 +422,18 @@ ul.two-column li {
         padding: 0 35px 0 35px;
     }
 
-    .container > section {
+    /* .container > section {
         page-break-inside: avoid;
-    }
+    } */
 
     .left-column {
         width: 250px;
         margin-right: 35px;
     }
 
-    .left-column .container {
+    /* .left-column .container {
         page-break-inside: avoid;
-    }
+    } */
 
     .fa-external-link {
         display: none;
@@ -436,6 +442,30 @@ ul.two-column li {
     .gpa {
         border: 1px solid #393e46;
         margin-left: 10px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+
+    .projects-container .item:nth-child(n+5) {
+        display: none;
+    }
+
+    .speaking-container .item:nth-child(n+5) {
+        display: none;
+    }
+
+    .right-column .container:nth-child(n+3) {
+        display: none;
+    }
+
+    .left-column .skills-container:nth-child(n+1) {
+        display: none;
     }
 }
 
@@ -494,10 +524,10 @@ ul.two-column li {
 			<header class="resume-header clearfix">
 			    <div class="profile-header">
 			        <h1 class="display-block">Anthony Dellavecchia</h1>
-			        <h2 class="display-block">Software Engineer and Creative Technologist</h2>
+			        <h2 class="display-block">Software Engineer, passionate about Developer Advocacy and Experience</h2>
 			    </div>
 			    <div class="profile-pic">
-			        <img src="https://www.anthonydellavecchia.com/images/contact/avatar2.png" alt="profile-pic">
+			        <img src="https://www.anthonydellavecchia.com/images/contact/profile-pic.png" alt="profile-pic">
 			    </div>
 			</header>
 			<div class="resume-content">
@@ -512,7 +542,7 @@ ul.two-column li {
 					                <i class="fa fa-map-marker"></i>
 					        
 					                <h6 class="info-text">
-					                        Dallas, Texas
+					                        Seattle, Washington
 					                </h6>
 					        </div>
 					
@@ -520,8 +550,8 @@ ul.two-column li {
 					                    <i class="fa fa-envelope"></i>
 					        
 					                <h6 class="info-text">
-					                    <a href="mailto:anthony.dellavecchia.tech@gmail.com" target="_blank">
-					                        anthony.dellavecchia.tech@gmail.com <i class="fa fa-external-link" aria-hidden="true"></i>
+					                    <a href="mailto:hireme@anthonydellavecchia.com" target="_blank">
+					                        hireme@anthonydellavecchia.com <i class="fa fa-external-link" aria-hidden="true"></i>
 					                    </a>
 					                </h6>
 					        </div>
@@ -574,48 +604,309 @@ ul.two-column li {
 					                                 </h6>
 					                         </div>
 					</div>
+					<div class="container education-container">
+					    <div class="title">
+					            <i class="fa fas fa-user-graduate"></i>
+					        <h3>Education</h3>
+					        <div class="keyline"></div>
+					    </div>
+					
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h4 class="bold pull-left">
+					                        University of California, Los Angeles
+					                </h4>
+					            </div>
+					
+					            <h4 class="display-inline">Master of Science - Engineering Management</h4>
+					
+					
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h4 class="bold pull-left">
+					                        The University of Texas at Dallas
+					                </h4>
+					            </div>
+					
+					            <h4 class="display-inline">Bachelor of Science - Information Technology and Systems</h4>
+					
+					
+					        </section>
+					</div>
+					<div class="container speaking-container">
+					    <div class="title">
+					            <i class="fa fas fa-video-camera"></i>
+					        <h3>Public Speaking</h3>
+					        <div class="keyline"></div>
+					    </div>
+					
+					        <section class="item">
+					            <div class="section-header">
+					                <h5 class="italic pull-right">
+					                            10/2022
+					                </h5>
+					            </div>
+					
+					            <h4 class="bold pull-left" style="display: contents;">Twilio Meetup</h4>
+					
+					                    <a href="https://noti.st/anthonyjdella/YEMatV/do-you-like-scary-movies" target="_blank">
+					                        <p class="topic">Do You Like Scary Movies?</p><i aria-hidden="true"></i>
+					                    </a>
+					        </section>
+					        <section class="item">
+					            <div class="section-header">
+					                <h5 class="italic pull-right">
+					                            09/2022
+					                </h5>
+					            </div>
+					
+					            <h4 class="bold pull-left" style="display: contents;">Spiceworld</h4>
+					
+					                    <a href="https://noti.st/anthonyjdella/L6gFMA/summarize-text-from-images-using-ai-and-twilio" target="_blank">
+					                        <p class="topic">Summarize Text from Images Using Twilio</p><i aria-hidden="true"></i>
+					                    </a>
+					        </section>
+					        <section class="item">
+					            <div class="section-header">
+					                <h5 class="italic pull-right">
+					                            09/2022
+					                </h5>
+					            </div>
+					
+					            <h4 class="bold pull-left" style="display: contents;">PennApps</h4>
+					
+					                    <a href="https://noti.st/anthonyjdella/imxRTl/summarize-text-from-images-using-ai-and-twilio" target="_blank">
+					                        <p class="topic">Summarize Text from Images Using Twilio</p><i aria-hidden="true"></i>
+					                    </a>
+					        </section>
+					        <section class="item">
+					            <div class="section-header">
+					                <h5 class="italic pull-right">
+					                            08/2022
+					                </h5>
+					            </div>
+					
+					            <h4 class="bold pull-left" style="display: contents;">Twilio Meetup</h4>
+					
+					                    <a href="https://noti.st/anthonyjdella/U9Vpix/learning-to-code-lets-send-texts-by-writing-code" target="_blank">
+					                        <p class="topic">Learning to Code?</p><i aria-hidden="true"></i>
+					                    </a>
+					        </section>
+					        <section class="item">
+					            <div class="section-header">
+					                <h5 class="italic pull-right">
+					                            07/2022
+					                </h5>
+					            </div>
+					
+					            <h4 class="bold pull-left" style="display: contents;">API Days</h4>
+					
+					                    <a href="https://www.youtube.com/watch?v&#x3D;elgcCqnNeEs" target="_blank">
+					                        <p class="topic">Gaining Trust in APIs and What to Look For</p><i aria-hidden="true"></i>
+					                    </a>
+					        </section>
+					        <section class="item">
+					            <div class="section-header">
+					                <h5 class="italic pull-right">
+					                            07/2022
+					                </h5>
+					            </div>
+					
+					            <h4 class="bold pull-left" style="display: contents;">API Days</h4>
+					
+					                    <a href="https://www.youtube.com/watch?v&#x3D;LnfYf6baTQs" target="_blank">
+					                        <p class="topic">Live Code an App that Texts NBA News</p><i aria-hidden="true"></i>
+					                    </a>
+					        </section>
+					        <section class="item">
+					            <div class="section-header">
+					                <h5 class="italic pull-right">
+					                            06/2022
+					                </h5>
+					            </div>
+					
+					            <h4 class="bold pull-left" style="display: contents;">Transform Together</h4>
+					
+					                    <a href="https://noti.st/anthonyjdella/6TEdbM/mars-rover-emails-with-twilio-sendgrid" target="_blank">
+					                        <p class="topic">Mars Rover Emails with Twilio Sendgrid</p><i aria-hidden="true"></i>
+					                    </a>
+					        </section>
+					</div>
+					<div class="container work-container">
+					    <div class="title">
+					            <i class="fa fas fa-pencil"></i>
+					        <h3>Articles</h3>
+					        <div class="keyline"></div>
+					    </div>
+					        <section class="item">
+					                <h6 class="info-text">
+					                    <a href="https://anthonydellavecchia.com/blog/gaining_trust_in_apis/" target="_blank">
+					                        Gaining Trust in APIs<i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					                </h6>
+					        </section>
+					        <section class="item">
+					                <h6 class="info-text">
+					                    <a href="https://www.twilio.com/blog/do-you-like-scary-movies-build-a-halloween-project-with-twilio" target="_blank">
+					                        Do You Like Scary Movies?<i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					                </h6>
+					        </section>
+					        <section class="item">
+					                <h6 class="info-text">
+					                    <a href="https://www.twilio.com/blog/summarize-text-from-images-using-ai-and-twilio" target="_blank">
+					                        Summarize Text from Images using AI and Twilio<i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					                </h6>
+					        </section>
+					        <section class="item">
+					                <h6 class="info-text">
+					                    <a href="https://www.twilio.com/blog/get-the-latest-nba-news-sent-to-your-phone-via-sms" target="_blank">
+					                        Get the Latest NBA Sent to Your Phone via SMS<i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					                </h6>
+					        </section>
+					        <section class="item">
+					                <h6 class="info-text">
+					                    <a href="https://www.twilio.com/blog/introducing-twilio-developer-evangelist-anthony-dellavecchia" target="_blank">
+					                        Introducing Developer Evangelist Anthony<i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					                </h6>
+					        </section>
+					        <section class="item">
+					                <h6 class="info-text">
+					                    <a href="https://anthonydellavecchia.com/blog/what-are-apis-2/" target="_blank">
+					                        What Are APIs Part 2<i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					                </h6>
+					        </section>
+					        <section class="item">
+					                <h6 class="info-text">
+					                    <a href="https://anthonydellavecchia.com/blog/what-are-apis-1/" target="_blank">
+					                        What Are APIs Part 1<i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					                </h6>
+					        </section>
+					        <section class="item">
+					                <h6 class="info-text">
+					                    <a href="https://anthonydellavecchia.com/blog/fonts-for-programmers/" target="_blank">
+					                        Fonts For Programmers<i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					                </h6>
+					        </section>
+					        <section class="item">
+					                <h6 class="info-text">
+					                    <a href="https://anthonydellavecchia.com/blog/updating-my-avatar/" target="_blank">
+					                        Updating My Avatar<i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					                </h6>
+					        </section>
+					        <section class="item">
+					                <h6 class="info-text">
+					                    <a href="https://anthonydellavecchia.com/blog/mongodb-atlas-hackathon/" target="_blank">
+					                        MongoDB Atlas Hackathon<i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					                </h6>
+					        </section>
+					        <section class="item">
+					                <h6 class="info-text">
+					                    <a href="https://anthonydellavecchia.com/blog/rogue-dev-purposely-breaks-software/" target="_blank">
+					                        Rogue Dev Purposely Breaks Software<i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					                </h6>
+					        </section>
+					        <section class="item">
+					                <h6 class="info-text">
+					                    <a href="https://anthonydellavecchia.com/blog/how-to-add-search-to-your-hugo-static-site/" target="_blank">
+					                        How to Add Search to Your Hugo Site<i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					                </h6>
+					        </section>
+					        <section class="item">
+					                <h6 class="info-text">
+					                    <a href="https://anthonydellavecchia.com/blog/is-99-good/" target="_blank">
+					                        Is 99% Good?<i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					                </h6>
+					        </section>
+					        <section class="item">
+					                <h6 class="info-text">
+					                    <a href="https://anthonydellavecchia.com/blog/how-to-forward-emails-to-your-domain/" target="_blank">
+					                        How to Forward Emails to Your Domain<i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					                </h6>
+					        </section>
+					        <section class="item">
+					                <h6 class="info-text">
+					                    <a href="https://anthonydellavecchia.com/blog/launch-insights/" target="_blank">
+					                        Launch Insights<i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					                </h6>
+					        </section>
+					        <section class="item">
+					                <h6 class="info-text">
+					                    <a href="https://anthonydellavecchia.com/blog/how-to-check-your-website-users/" target="_blank">
+					                        How to Check your Websites Users<i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					                </h6>
+					        </section>
+					        <section class="item">
+					                <h6 class="info-text">
+					                    <a href="https://anthonydellavecchia.com/blog/how-to-animate-an-emoji-with-css/" target="_blank">
+					                        How to Animate an Emoji with CSS<i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					                </h6>
+					        </section>
+					        <section class="item">
+					                <h6 class="info-text">
+					                    <a href="https://anthonydellavecchia.com/blog/designing-an-animated-logo/" target="_blank">
+					                        Designing an Animated Logo<i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					                </h6>
+					        </section>
+					        <section class="item">
+					                <h6 class="info-text">
+					                    <a href="https://anthonydellavecchia.com/blog/magic-numbers/" target="_blank">
+					                        Magic Numbers<i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					                </h6>
+					        </section>
+					        <section class="item">
+					                <h6 class="info-text">
+					                    <a href="https://anthonydellavecchia.com/blog/how-to-never-miss-out-on-a-job-opening/" target="_blank">
+					                        How to Never Miss Out on a Job Opportunity<i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					                </h6>
+					        </section>
+					</div>
 					    <div class="skills-container">
 					            <section class="container">
 					                    <div class="title">
-					                        <h3>Current Experience</h3>
+					                        <h3>Developer Relations</h3>
 					                        <div class="keyline"></div>
 					                    </div>
 					                    <ul class="minimal">
-					                            <li><h6>Java</h6></li>
+					                            <li><h6>Public Speaking</h6></li>
+					                            <li><h6>Technical Content Creation</h6></li>
+					                            <li><h6>Writing</h6></li>
+					                            <li><h6>Video Production</h6></li>
+					                            <li><h6>Social Media</h6></li>
+					                            <li><h6>Empathy</h6></li>
+					                    </ul>
+					            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Software Development</h3>
+					                        <div class="keyline"></div>
+					                    </div>
+					                    <ul class="minimal">
 					                            <li><h6>Python</h6></li>
+					                            <li><h6>Java</h6></li>
 					                            <li><h6>Git</h6></li>
 					                            <li><h6>CI/CD</h6></li>
-					                            <li><h6>Spring Boot</h6></li>
-					                            <li><h6>JUnit</h6></li>
-					                            <li><h6>Cucumber</h6></li>
-					                            <li><h6>Unix</h6></li>
-					                    </ul>
-					            </section>
-					            <section class="container">
-					                    <div class="title">
-					                        <h3>Prior Experience</h3>
-					                        <div class="keyline"></div>
-					                    </div>
-					                    <ul class="minimal">
-					                            <li><h6>Node.js</h6></li>
-					                            <li><h6>JavaScript</h6></li>
-					                            <li><h6>HTML</h6></li>
-					                            <li><h6>CSS</h6></li>
-					                            <li><h6>ETL</h6></li>
-					                            <li><h6>SQL</h6></li>
-					                            <li><h6>UI/UX Design</h6></li>
-					                    </ul>
-					            </section>
-					            <section class="container">
-					                    <div class="title">
-					                        <h3>Engineering</h3>
-					                        <div class="keyline"></div>
-					                    </div>
-					                    <ul class="minimal">
-					                            <li><h6>Data Structures</h6></li>
-					                            <li><h6>Algorithms</h6></li>
-					                            <li><h6>Systems Design</h6></li>
-					                            <li><h6>Agile SDLC</h6></li>
+					                            <li><h6>HTML/CSS/JavaScript</h6></li>
+					                            <li><h6>DevOps</h6></li>
 					                    </ul>
 					            </section>
 					    </div>
@@ -628,7 +919,7 @@ ul.two-column li {
 					                <div class="keyline"></div>
 					            </div>
 					            <p class="summary">
-					                5+ years of experience in full-stack software development. Interested in solving technical challenges, mastering data structures & algorithms, software engineering, problem solving, open-source, user experience design, and continuous improvement.
+					                I write code on stage in front of a crowd. With 5+ years of experience in full-stack software development, I aim to teach and inspire thousands of developers to build cool things with code. I enjoy sparking the imagination of developers and helping them build deep experiences with technology. I'm interested in applying creativity to software engineering, public speaking, advocating for the developer community, creating technical content and storytelling, improving developer experiences, contributing to open-source software, and influencing teams to build great products.
 					            </p>
 					        </div>
 					<div class="container work-container">
@@ -640,19 +931,67 @@ ul.two-column li {
 					
 					        <section class="item">
 					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
+					                        Twilio
+					                </h3>
 					                <h5 class="italic pull-right">
-					                            <span class="startDate">02/2018</span>
+					                            <span class="startDate">04/2022</span>
 					                            <span class="endDate"> - present</span>
 					                </h5>
 					            </div>
 					
+					            <h4>Staff Developer Evangelist</h4>
+					
+					                <div class="info-tag-container">
+					                    <i class="fa fa-map-marker"></i>
+					
+					
+					                        <h6 class="info-text">
+					                                
+					                                Seattle, WA
+					                        </h6>
+					                </div>
+					
+					
+					            <ul>
+					                <li>Engagement: Built the TwilioQuest Booth Extension, a level in our educational video game that attracts, engages, and educates developers at conferences and events to learn about Twilio APIs.</li>
+					                <li>Keynote: Programmed the front end of Twilio&#x27;s Silent Network Authentication iOS demo application, which was highlighted during the Developer Keynote at Twilio Signal 2022.</li>
+					                <li>Inspire: Developed creative sample projects with Twilio APIs, then taught hundreds of developers across seven workshops how they can build similar projects for their use.</li>
+					                <li>Public Speaking: Delivered a keynote talk at a tech conference, addressed questions from enterprise developers during webinars, and mentored hundreds of student developers at multiple hackathons across the country.</li>
+					                <li>Story Telling: Publish technical blog posts and videos that guide, inspire, and spark the interest of thousands of developers to build with Twilio.</li>
+					                <li>Community: Established the first meetup group for Twilio developers in the Pacific Northwest, helped grow the community to over 100 members and reached a total Net Promotor Score of 77.</li>
+					            </ul>
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
+					                        State Farm ®
+					                </h3>
+					                <h5 class="italic pull-right">
+					                            <span class="startDate">02/2018</span>
+					                            <span class="endDate"> - 03/2022</span>
+					                </h5>
+					            </div>
+					
 					            <h4>Software Developer</h4>
+					
+					                <div class="info-tag-container">
+					                    <i class="fa fa-map-marker"></i>
+					
+					
+					                        <h6 class="info-text">
+					                                
+					                                Dallas, TX
+					                        </h6>
+					                </div>
 					
 					
 					            <ul>
 					                <li>Backend: Develop, test, deploy, and maintain business-critical RESTful APIs using Java &amp; Spring Boot framework that serves data and handles 100,000+ requests to our insurance policy platform, to prevent millions in monetary loss.</li>
 					                <li>Integration Layer: Design and implement a microservice integration layer utilizing Java &amp; Spring Boot to abstract components between our core application and outbound calls to high-impact business data, which help calculate insurance rates.</li>
 					                <li>DevOps: Optimize software release efficiency up to 50% by creating CI/CD pipelines that automatically build, scan, test, and deploy software, which improves time-to-market.</li>
+					                <li>Community: Conduct developer talks, technical presentations, and tutorials for hundreds of internal software developers, as well as other non-technical audiences (such as analysts and management).</li>
+					                <li>Marketing: Create and manage the marketing content for our annual department-wide IT conference which is open to over 50,000 employees.</li>
 					                <li>Chaos Engineering: Reduce web service unplanned downtime by implementing Chaos Engineering tools to determine potential failure points, which saves time and costs.</li>
 					                <li>Automation: Perform BDD using Agile methodology by writing automated E2E UI tests in CodeceptJS and Gherkin to quickly and effectively validate business scenarios.</li>
 					                <li>Quality: Provide guidance and leadership to implement best practices and tools for optimizing team productivity, spearhead document creation of solution architecture, and create dashboards &amp; reports for management.</li>
@@ -660,6 +999,9 @@ ul.two-column li {
 					        </section>
 					        <section class="item">
 					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
+					                        Bank of America
+					                </h3>
 					                <h5 class="italic pull-right">
 					                            <span class="startDate">01/2017</span>
 					                            <span class="endDate"> - 02/2018</span>
@@ -667,6 +1009,16 @@ ul.two-column li {
 					            </div>
 					
 					            <h4>Applications Programmer</h4>
+					
+					                <div class="info-tag-container">
+					                    <i class="fa fa-map-marker"></i>
+					
+					
+					                        <h6 class="info-text">
+					                                
+					                                Dallas, TX
+					                        </h6>
+					                </div>
 					
 					
 					            <ul>
@@ -677,6 +1029,9 @@ ul.two-column li {
 					        </section>
 					        <section class="item">
 					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
+					                        GM Financial
+					                </h3>
 					                <h5 class="italic pull-right">
 					                            <span class="startDate">06/2016</span>
 					                            <span class="endDate"> - 12/2016</span>
@@ -684,6 +1039,16 @@ ul.two-column li {
 					            </div>
 					
 					            <h4>ETL Developer Intern</h4>
+					
+					                <div class="info-tag-container">
+					                    <i class="fa fa-map-marker"></i>
+					
+					
+					                        <h6 class="info-text">
+					                                
+					                                Dallas, TX
+					                        </h6>
+					                </div>
 					
 					
 					            <ul>
@@ -693,47 +1058,7 @@ ul.two-column li {
 					            </ul>
 					        </section>
 					</div>
-					<div class="container education-container">
-					    <div class="title">
-					            <i class="fa fas fa-user-graduate"></i>
-					        <h3>Education</h3>
-					        <div class="keyline"></div>
-					    </div>
-					
-					        <section class="item">
-					            <div class="section-header clearfix">
-					                <h3 class="bold pull-left">
-					                        University of California, Los Angeles
-					                </h3>
-					                <h5 class="italic pull-right">
-					                            <span class="startDate">2019</span>
-					                            <span class="endDate"> - 2022</span>
-					                </h5>
-					            </div>
-					
-					            <h4 class="display-inline">Master of Science - Engineering Management</h4>
-					
-					            <h5 class="display-inline gpa">GPA 3.71 GPA</h5>
-					
-					        </section>
-					        <section class="item">
-					            <div class="section-header clearfix">
-					                <h3 class="bold pull-left">
-					                        The University of Texas at Dallas
-					                </h3>
-					                <h5 class="italic pull-right">
-					                            <span class="startDate">2014</span>
-					                            <span class="endDate"> - 2016</span>
-					                </h5>
-					            </div>
-					
-					            <h4 class="display-inline">Bachelor of Science - Information Technology and Systems</h4>
-					
-					            <h5 class="display-inline gpa">GPA Cum Laude, 3.66 GPA</h5>
-					
-					        </section>
-					</div>
-					<div class="container work-container">
+					<div class="container projects-container">
 					    <div class="title">
 					            <i class="fa fas fa-user-tie"></i>
 					        <h3>Projects</h3>
@@ -742,11 +1067,76 @@ ul.two-column li {
 					        <section class="item">
 					            <div class="section-header clearfix">
 					                <h3 class="bold pull-left">
+					                        TwilioQuest Extension
+					                </h3>
+					                <h5 class="italic pull-right">
+					                </h5>
+					            </div>
+					                <h6 class="info-text">
+					                    <a href="https://github.com/anthonyjdella/twilio-quest-booth-mission" target="_blank">
+					                        GitHub Repository<i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					                </h6>
+					            <p class="summary">Built a mission in TwilioQuest, Twilio's educational video game, to attract and teach developers how to use Twilio at tech events. The mission includes coding challenges for players, conversations with NPCs, Twilio API missions, and more. It was built with Phaser.js and Tiled.</p>
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
+					                        Summarize Text from Images
+					                </h3>
+					                <h5 class="italic pull-right">
+					                </h5>
+					            </div>
+					                <h6 class="info-text">
+					                    <a href="https://github.com/anthonyjdella/nba-news" target="_blank">
+					                        GitHub Repository<i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					                </h6>
+					            <p class="summary">Developed a Python app that performs text recognition on photos then sends you a message with a summary. It uses the Google Cloud Vision API to detect text in images, OpenAI to generate a summary of the text, and the Twilio SMS API to alert users.</p>
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
+					                        Do You Like Scary Movies?
+					                </h3>
+					                <h5 class="italic pull-right">
+					                </h5>
+					            </div>
+					                <h6 class="info-text">
+					                    <a href="https://www.twilio.com/blog/do-you-like-scary-movies-build-a-halloween-project-with-twilio" target="_blank">
+					                        GitHub Repository<i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					                </h6>
+					            <p class="summary">Created a serverless web app that spooks users by re-creating a famous scene from the movie Scream. Built with low-code tools and serveless functions, it's a fun application to share during Halloween.</p>
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
+					                        NBA News on Demand
+					                </h3>
+					                <h5 class="italic pull-right">
+					                </h5>
+					            </div>
+					                <h6 class="info-text">
+					                    <a href="https://github.com/anthonyjdella/nba-news" target="_blank">
+					                        GitHub Repository<i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					                </h6>
+					            <p class="summary">Built a demo app in Python using the Twilio SMS API to send users on-demand NBA news. It's meant to guide beginners to send and receive incoming messages using Twilio.</p>
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
 					                        JSON Resume using LinkedIn
 					                </h3>
 					                <h5 class="italic pull-right">
 					                </h5>
 					            </div>
+					                <h6 class="info-text">
+					                    <a href="https://github.com/anthonyjdella/customized-linkedin-to-jsonresume" target="_blank">
+					                        GitHub Repository<i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					                </h6>
 					            <p class="summary">Customized a chrome extension to parse data from a LinkedIn profile, generate a custom JSON file, transform the data using a Python script, and build an online resume (hosted on Firebase). Developed and packaged multiple themes on NPM and GitHub Registry. Also created a subdomain name to point to this Firebase function.</p>
 					        </section>
 					        <section class="item">
@@ -757,6 +1147,11 @@ ul.two-column li {
 					                <h5 class="italic pull-right">
 					                </h5>
 					            </div>
+					                <h6 class="info-text">
+					                    <a href="https://www.anthonydellavecchia.com" target="_blank">
+					                        GitHub Repository<i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					                </h6>
 					            <p class="summary">Developed a website using a static-site generator, Hugo, and a custom domain name for my personal brand. It's deployed and hosted on Firebase & GitHub. It's integrated with my JSON resume project, so you can select a theme and view my resume.</p>
 					        </section>
 					        <section class="item">
@@ -767,6 +1162,11 @@ ul.two-column li {
 					                <h5 class="italic pull-right">
 					                </h5>
 					            </div>
+					                <h6 class="info-text">
+					                    <a href="https://github.com/anthonyjdella/automated-job-web-scraping" target="_blank">
+					                        GitHub Repository<i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					                </h6>
 					            <p class="summary">Developed a server-side script with Node.js that automatically searches and scrapes data of job postings from select company websites, then sends a notification to the user.</p>
 					        </section>
 					</div>
@@ -778,6 +1178,11 @@ ul.two-column li {
 					    </div>
 					
 					        <section class="item">
+					            <div class="section-header">
+					                <h5 class="italic pull-right">
+					                            2016
+					                </h5>
+					            </div>
 					            <div class="section-header clearfix">
 					                <h3 class="bold pull-left">
 					                        Cum Laude Honors
@@ -789,6 +1194,11 @@ ul.two-column li {
 					            <h5 class="awarder">The University of Texas at Dallas</h5>
 					        </section>
 					        <section class="item">
+					            <div class="section-header">
+					                <h5 class="italic pull-right">
+					                            2014
+					                </h5>
+					            </div>
 					            <div class="section-header clearfix">
 					                <h3 class="bold pull-left">
 					                        Dean&#x27;s List
@@ -800,6 +1210,11 @@ ul.two-column li {
 					            <h5 class="awarder">The University of Texas at Dallas</h5>
 					        </section>
 					        <section class="item">
+					            <div class="section-header">
+					                <h5 class="italic pull-right">
+					                            2014
+					                </h5>
+					            </div>
 					            <div class="section-header clearfix">
 					                <h3 class="bold pull-left">
 					                        Comet Scholarship

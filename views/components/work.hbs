@@ -4,10 +4,29 @@
 
     {{#each resume.work}}
         <section class="item">
-            {{> section-header-work name=this.company }}
+            {{> section-header-work name=this.name }}
 
             {{#if position}}
             <h4>{{position}}</h4>
+            {{/if}}
+
+            {{#if location}}
+                <div class="info-tag-container">
+                    <i class="fa fa-map-marker"></i>
+
+                    {{#if address}}
+                        <h6 class="info-text">
+                                {{removeProtocol text}}
+                        </h6>
+                    {{/if}}
+
+                    {{#if location}}
+                        <h6 class="info-text">
+                                {{text}}
+                                {{location}}
+                        </h6>
+                    {{/if}}
+                </div>
             {{/if}}
 
             {{#if summary}}

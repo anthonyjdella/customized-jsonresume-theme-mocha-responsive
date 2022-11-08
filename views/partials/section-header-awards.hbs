@@ -1,0 +1,20 @@
+<div class="section-header">
+    <h5 class="italic pull-right">
+        {{#if date}}
+            {{#is date date}}
+                {{formatDateAwards date}}
+            {{else}}
+                <span class="date">{{formatDateAwards date}}</span>
+                    {{#if endDate}}
+                <span class="endDate"> - {{formatDateAwards endDate}}</span>
+                    {{else}}
+                <span class="endDate"> - Present</span>
+                {{/if}}
+            {{/is}}
+        {{else if endDate}}
+            <span class="endDate">completed {{formatDateAwards endDate}}</span>
+        {{else if releaseDate}}
+            {{formatDateAwards releaseDate}}
+        {{/if}}
+    </h5>
+</div>

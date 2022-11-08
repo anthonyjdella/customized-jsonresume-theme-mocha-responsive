@@ -1,0 +1,23 @@
+{{#if resume.speaking.length}}
+<div class="container speaking-container">
+    {{> title value="Public Speaking" icon="fas fa-video-camera"}}
+
+    {{#each resume.speaking}}
+        <section class="item">
+            {{> section-header-speaking event=this.event }}
+
+            {{#if event}}
+            <h4 class="bold pull-left" style="display: contents;">{{event}}</h4>
+            {{/if}}
+
+            {{#if reference}}
+                {{!-- <p class="info-text"> --}}
+                    <a href="{{reference}}" target="_blank">
+                        <p class="topic">{{{mdToHtml topic}}}</p><i aria-hidden="true"></i>
+                    </a>
+                {{!-- </p> --}}
+            {{/if}}
+        </section>
+    {{/each}}
+</div>
+{{/if}}

@@ -4,6 +4,7 @@
 
     {{#each resume.awards}}
         <section class="item">
+            {{> section-header-awards date=this.date }}
             {{> section-header name=this.title}}
 
             {{#if awarder}}

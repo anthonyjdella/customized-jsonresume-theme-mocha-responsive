@@ -1,9 +1,16 @@
 {{#if resume.projects.length}}
-<div class="container work-container">
+<div class="container projects-container">
     {{> title value="Projects" icon="fas fa-user-tie"}}
     {{#each resume.projects}}
         <section class="item">
             {{> section-header name=this.name }}
+            {{#if url}}
+                <h6 class="info-text">
+                    <a href="{{url}}" target="_blank">
+                        GitHub Repository<i class="fa fa-external-link" aria-hidden="true"></i>
+                    </a>
+                </h6>
+            {{/if}}
             {{#if summary}}
             <p class="summary">{{{mdToHtml summary}}}</p>
             {{/if}}
