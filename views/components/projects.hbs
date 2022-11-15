@@ -3,7 +3,7 @@
     {{> title value="Projects" icon="fas fa-user-tie"}}
     {{#each resume.projects}}
         <section class="item">
-            {{> section-header name=this.name }}
+            {{> section-header-project name=this.name }}
             {{#if url}}
                 <h6 class="info-text">
                     <a href="{{url}}" target="_blank">

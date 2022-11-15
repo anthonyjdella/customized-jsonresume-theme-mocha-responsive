@@ -1,0 +1,26 @@
+<div class="section-header clearfix">
+    {{#if name}}
+    <h3 class="bold pull-left">
+        {{#if website}}
+            <a href="{{website}}" target="_blank">
+                {{name}} <i class="fa fa-external-link" aria-hidden="true"></i>
+            </a>
+        {{else}}
+            {{name}}
+        {{/if}}
+    </h3>
+    {{/if}}
+    <h5 class="italic pull-right">
+        {{#if startDate}}
+            {{#is startDate endDate}}
+                {{formatDateProject startDate}}
+            {{else}}
+                <span class="startDate">{{formatDateProject startDate}}</span>
+            {{/is}}
+        {{else if endDate}}
+            <span class="endDate">completed {{formatDateProject endDate}}</span>
+        {{else if releaseDate}}
+            {{formatDateProject releaseDate}}
+        {{/if}}
+    </h5>
+</div>

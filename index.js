@@ -138,6 +138,15 @@ const customHelpers = {
         }
     },
 
+    formatDateProject: function (dateString) {
+        const parsedDate = new Date(dateString);
+        if (dateString != "present") {
+            return `${parsedDate.getFullYear()}`;
+        } else {
+            return "present";
+        }
+    },
+
     formatDateAwards: function (dateString) {
         const parsedDate = new Date(dateString);
         if (dateString != "present") {
