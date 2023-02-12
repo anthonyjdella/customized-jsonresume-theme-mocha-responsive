@@ -245,8 +245,8 @@ ul.two-column li {
 */
 
 .profile-pic img {
-    width: 120px;
-    border-radius: 10%;
+    width: 80px;
+    border-radius: 100%;
     padding: 2px;
     object-fit: cover;
     float: right;
@@ -456,7 +456,11 @@ ul.two-column li {
         display: none;
     }
 
-    .speaking-container .item:nth-child(n+5) {
+    .speaking-container .item:nth-child(n+12) {
+        display: none;
+    }
+
+    .work-container .item:nth-child(n+13) {
         display: none;
     }
 
@@ -644,6 +648,32 @@ ul.two-column li {
 					        <section class="item">
 					            <div class="section-header">
 					                <h5 class="italic pull-right">
+					                            01/2023
+					                </h5>
+					            </div>
+					
+					            <h4 class="bold pull-left" style="display: contents;">Twilio Webinar</h4>
+					
+					                    <a href="https://interactive.twilio.com/level-up-with-studio-prototype-enhance-and-share-your-workflows-webinar" target="_blank">
+					                        <p class="topic">Level Up with Twilio Studio</p><i aria-hidden="true"></i>
+					                    </a>
+					        </section>
+					        <section class="item">
+					            <div class="section-header">
+					                <h5 class="italic pull-right">
+					                            12/2022
+					                </h5>
+					            </div>
+					
+					            <h4 class="bold pull-left" style="display: contents;">Stack Overflow Podcast</h4>
+					
+					                    <a href="https://stackoverflow.blog/2022/12/20/lets-talk-about-our-favorite-terminal-tools/" target="_blank">
+					                        <p class="topic">Let’s talk about our favorite terminal tools</p><i aria-hidden="true"></i>
+					                    </a>
+					        </section>
+					        <section class="item">
+					            <div class="section-header">
+					                <h5 class="italic pull-right">
 					                            10/2022
 					                </h5>
 					            </div>
@@ -739,6 +769,20 @@ ul.two-column li {
 					        <h3>Articles</h3>
 					        <div class="keyline"></div>
 					    </div>
+					        <section class="item">
+					                <h6 class="info-text">
+					                    <a href="https://www.twilio.com/blog/use-your-fingerprint-with-1password-to-authenticate-twilio-cli" target="_blank">
+					                        Use Your Fingerprint with 1Password to Authenticate the Twilio CLI<i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					                </h6>
+					        </section>
+					        <section class="item">
+					                <h6 class="info-text">
+					                    <a href="https://anthonydellavecchia.com/blog/this-blog-post-is-written-by-ai/" target="_blank">
+					                        AI Wrote this Blog Post About Taking Over Your Job<i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					                </h6>
+					        </section>
 					        <section class="item">
 					                <h6 class="info-text">
 					                    <a href="https://anthonydellavecchia.com/blog/gaining_trust_in_apis/" target="_blank">
@@ -919,7 +963,7 @@ ul.two-column li {
 					                <div class="keyline"></div>
 					            </div>
 					            <p class="summary">
-					                I write code on stage in front of a crowd. With 5+ years of experience in full-stack software development, I aim to teach and inspire thousands of developers to build cool things with code. I enjoy sparking the imagination of developers and helping them build deep experiences with technology. I'm interested in applying creativity to software engineering, public speaking, advocating for the developer community, creating technical content and storytelling, improving developer experiences, contributing to open-source software, and influencing teams to build great products.
+					                I write code on stage in front of a crowd. With 5+ years of experience in full-stack software development, I aim to teach and inspire thousands of developers to change the world with code. I enjoy sparking the imagination of developers and helping them build deep experiences with technology. I'm interested in applying creativity to software engineering, public speaking, advocating for the developer community, creating technical content and storytelling, improving developer experiences, contributing to open-source software, and influencing teams to build great products.
 					            </p>
 					        </div>
 					<div class="container work-container">
@@ -954,12 +998,14 @@ ul.two-column li {
 					
 					
 					            <ul>
-					                <li>Engagement: Built the TwilioQuest Booth Extension, a level in our educational video game that attracts, engages, and educates developers at conferences and events to learn about Twilio APIs.</li>
+					                <li>Inspire: Designed and implemented innovative Python applications utilizing Twilio APIs, and provided hands-on training to hundreds of developers through 8 comprehensive workshops.</li>
+					                <li>Public Speaking: Delivered a keynote talk at a premier tech conference, engaged with enterprise developers through webinar Q&amp;A sessions, and provided mentorship to hundreds of student developers at multiple national hackathons.</li>
+					                <li>Community: Established the first meetup group for Twilio developers in the Pacific Northwest, successfully expanding the community to over 130 members and reached a total Net Promotor Score of 77.</li>
+					                <li>Leadership: Represented the Developer Network organization in meetings with senior leadership and marketing stakeholders, effectively communicating its initiatives and objectives.</li>
+					                <li>Engagement: Built the TwilioQuest Booth Extension, a unique level in our educational video game that attracts, engages, and educates developers about Twilio APIs at conferences and events.</li>
 					                <li>Keynote: Programmed the front end of Twilio&#x27;s Silent Network Authentication iOS demo application, which was highlighted during the Developer Keynote at Twilio Signal 2022.</li>
-					                <li>Inspire: Developed creative sample projects with Twilio APIs, then taught hundreds of developers across seven workshops how they can build similar projects for their use.</li>
-					                <li>Public Speaking: Delivered a keynote talk at a tech conference, addressed questions from enterprise developers during webinars, and mentored hundreds of student developers at multiple hackathons across the country.</li>
-					                <li>Story Telling: Publish technical blog posts and videos that guide, inspire, and spark the interest of thousands of developers to build with Twilio.</li>
-					                <li>Community: Established the first meetup group for Twilio developers in the Pacific Northwest, helped grow the community to over 100 members and reached a total Net Promotor Score of 77.</li>
+					                <li>Collaborate: Facilitated internal cross-collaboration between product, marketing, sales, and development teams, as well as with external partners such as Stripe, Box, and 1Password.</li>
+					                <li>Story Telling: Authored and published technical blog posts and videos that guide, inspire, and spark the interest of thousands of developers to create solutions using Twilio.</li>
 					            </ul>
 					        </section>
 					        <section class="item">
@@ -987,14 +1033,13 @@ ul.two-column li {
 					
 					
 					            <ul>
-					                <li>Backend: Develop, test, deploy, and maintain business-critical RESTful APIs using Java &amp; Spring Boot framework that serves data and handles 100,000+ requests to our insurance policy platform, to prevent millions in monetary loss.</li>
-					                <li>Integration Layer: Design and implement a microservice integration layer utilizing Java &amp; Spring Boot to abstract components between our core application and outbound calls to high-impact business data, which help calculate insurance rates.</li>
-					                <li>DevOps: Optimize software release efficiency up to 50% by creating CI/CD pipelines that automatically build, scan, test, and deploy software, which improves time-to-market.</li>
-					                <li>Community: Conduct developer talks, technical presentations, and tutorials for hundreds of internal software developers, as well as other non-technical audiences (such as analysts and management).</li>
-					                <li>Marketing: Create and manage the marketing content for our annual department-wide IT conference which is open to over 50,000 employees.</li>
-					                <li>Chaos Engineering: Reduce web service unplanned downtime by implementing Chaos Engineering tools to determine potential failure points, which saves time and costs.</li>
-					                <li>Automation: Perform BDD using Agile methodology by writing automated E2E UI tests in CodeceptJS and Gherkin to quickly and effectively validate business scenarios.</li>
-					                <li>Quality: Provide guidance and leadership to implement best practices and tools for optimizing team productivity, spearhead document creation of solution architecture, and create dashboards &amp; reports for management.</li>
+					                <li>Backend: Developed, tested, deployed, and maintained business-critical RESTful APIs that serves data and handles 100,000+ requests to our insurance policy platform, mitigating the risk of millions in monetary loss.</li>
+					                <li>Integration Layer: Designed and implemented a microservice integration layer utilizing Java &amp; Spring Boot to abstract components between our core application and outbound calls to high-impact business data, which help calculate insurance rates.</li>
+					                <li>DevOps: Optimized software release efficiency up to 50% by creating CI/CD pipelines that automatically build, scan, test, and deploy software, which improves time-to-market.</li>
+					                <li>Community: Conducted developer talks, technical presentations, and tutorials for hundreds of internal software developers, as well as other non-technical audiences (such as analysts and management).</li>
+					                <li>Marketing: Created and managed the marketing content for our annual department-wide IT conference which is open to over 50,000 employees.</li>
+					                <li>Chaos Engineering: Reduced web service unplanned downtime by implementing Chaos Engineering tools to determine potential failure points, which saves time and costs.</li>
+					                <li>Automation: Performed BDD using Agile methodology by writing automated E2E UI tests in CodeceptJS and Gherkin to quickly and effectively validate business scenarios.</li>
 					            </ul>
 					        </section>
 					        <section class="item">
@@ -1022,9 +1067,9 @@ ul.two-column li {
 					
 					
 					            <ul>
-					                <li>Frontend: Develop a frontend web application written in TypeScript, which manages customer banking appointments and 20,000+ associate schedules.</li>
-					                <li>Troubleshooting: Collaborate with stakeholders and product teams to implement business requirements and resolve technical defects and bugs.</li>
-					                <li>Metrics: Perform analysis on internal hiring data and create weekly reports for senior management to build teams based on skillsets and experience.</li>
+					                <li>Leadership: Conducted in-depth analysis of internal hiring data, presenting weekly reports to senior management to support hiring decisions.</li>
+					                <li>Frontend: Developed a frontend web application written in TypeScript, which manages customer banking appointments and 20,000+ associate schedules.</li>
+					                <li>Troubleshooting: Collaborated with stakeholders and product teams to implement business requirements and resolve technical defects and bugs.</li>
 					            </ul>
 					        </section>
 					        <section class="item">
@@ -1052,9 +1097,9 @@ ul.two-column li {
 					
 					
 					            <ul>
-					                <li>ETL: Build data mapping transformations using ETL tools to extract, transform, and load data for various data warehouse projects.</li>
-					                <li>Database: Execute SQL search queries to filter data subsets needed for staging and transformation.</li>
-					                <li>Monitoring: Schedule, monitor, and configure automatic failure notifications for 700+ ETL workflows in production.</li>
+					                <li>ETL: Built data mapping transformations using ETL tools to extract, transform, and load data for various data warehouse projects.</li>
+					                <li>Database: Executed SQL search queries to filter data subsets needed for staging and transformation.</li>
+					                <li>Monitoring: Scheduled, monitored, and configured automatic failure notifications for 700+ ETL workflows in production.</li>
 					            </ul>
 					        </section>
 					</div>
@@ -1064,6 +1109,22 @@ ul.two-column li {
 					        <h3>Projects</h3>
 					        <div class="keyline"></div>
 					    </div>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
+					                        Daily Sit-Down
+					                </h3>
+					                <h5 class="italic pull-right">
+					                            <span class="startDate">2023</span>
+					                </h5>
+					            </div>
+					                <h6 class="info-text">
+					                    <a href="https://github.com/anthonyjdella/level-up-with-twilio-studio" target="_blank">
+					                        GitHub Repository<i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					                </h6>
+					            <p class="summary">Developed an application using Python and Airtable, enhancing the experience of daily stand-up meetings.</p>
+					        </section>
 					        <section class="item">
 					            <div class="section-header clearfix">
 					                <h3 class="bold pull-left">
@@ -1110,7 +1171,7 @@ ul.two-column li {
 					                        GitHub Repository<i class="fa fa-external-link" aria-hidden="true"></i>
 					                    </a>
 					                </h6>
-					            <p class="summary">Created a serverless web app that spooks users by re-creating a famous scene from the movie Scream. Built with low-code tools and serveless functions, it's a fun application to share during Halloween.</p>
+					            <p class="summary">Created a serverless web app that spooks users by re-creating a famous scene from the movie Scream. Built with low-code tools and serverless functions, it's a fun application to share during Halloween.</p>
 					        </section>
 					        <section class="item">
 					            <div class="section-header clearfix">
@@ -1158,7 +1219,7 @@ ul.two-column li {
 					                        GitHub Repository<i class="fa fa-external-link" aria-hidden="true"></i>
 					                    </a>
 					                </h6>
-					            <p class="summary">Developed a website using a static-site generator, Hugo, and a custom domain name for my personal brand. It's deployed and hosted on Firebase & GitHub. It's integrated with my JSON resume project, so you can select a theme and view my resume.</p>
+					            <p class="summary">Developed a website to showcase my person brand, portfolio, and speaking engagements. It's built with Hugo, a static-site generator, and has a custom domain name hosted on Firebase & GitHub. It's integrated with my JSON resume project, so users can view my resume in a variety of styles.</p>
 					        </section>
 					        <section class="item">
 					            <div class="section-header clearfix">

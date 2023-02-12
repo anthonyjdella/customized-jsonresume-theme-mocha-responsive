@@ -236,8 +236,8 @@ ul.two-column li {
 */
 
 .profile-pic img {
-    width: 120px;
-    border-radius: 10%;
+    width: 80px;
+    border-radius: 100%;
     padding: 2px;
     object-fit: cover;
     float: right;
@@ -447,7 +447,11 @@ ul.two-column li {
         display: none;
     }
 
-    .speaking-container .item:nth-child(n+5) {
+    .speaking-container .item:nth-child(n+12) {
+        display: none;
+    }
+
+    .work-container .item:nth-child(n+13) {
         display: none;
     }
 
